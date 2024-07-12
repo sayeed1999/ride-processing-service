@@ -1,0 +1,11 @@
+.env
+
+# binaries
+server
+go/bin
+go/pkg
+
+# other
+serverlog.txt
+.DS_Store
+_build/swagger_spec/index.html
