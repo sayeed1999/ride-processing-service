@@ -23,6 +23,13 @@ type Config struct {
 
 var AppConfig *Config
 
+func getEnv(key, defaultValue string) string {
+	if value, exists := os.LookupEnv(key); exists {
+		return value
+	}
+	return defaultValue
+}
+
 func LoadConfig() *Config {
 	err := godotenv.Load()
 	if err != nil {
@@ -31,11 +38,11 @@ func LoadConfig() *Config {
 
 	return &Config{
 		Server: ServerConfig{
-			Host: os.Getenv("Server__Host"),
-			Port: os.Getenv("Server__Port"),
+			Host: getEnv("Server__Host", "0.0.0.0"),
+			Port: getEnv("Server__Port", "8080"),
 		},
 		Redis: RedisConfig{
-			URL: os.Getenv("Redis__URL"),
+			URL: getEnv("Redis__URL", "redis://0.0.0.0:6379"),
 		},
 	}
 }
