@@ -1,8 +1,6 @@
 # Introduction
 
-This **Golang** microservice is a part of my project [**sayeed1999/Ride-Sharing-Platform**](https://github.com/sayeed1999/Ride-Sharing-Platform). This microservice contains the core algorithms e.g ride matchmaking, trip transition checking of the ride sharing app.
-
-The main app **Ride-Sharing-Platform**, which is built with **.NET**, uses this service as its microservice to do the core algorithm heavy lifting for it.
+This is a separate golang microservice project designed with the purpose to take the heavy lifting operations of the ride sharing business e.g ride matchmaking, trip transition checking of the ride sharing app.
 
 # Project Deployment Guide
 
